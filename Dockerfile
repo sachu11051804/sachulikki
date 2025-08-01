@@ -6,6 +6,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy your WAR file into Tomcat as ROOT.war
 COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
+RUN sed -i 's/<Server port="8005"/<Server port="-1"/' /usr/local/tomcat/conf/server.xml
 
 # Set environment variable for 2Factor API Key
 ENV TWOFACTOR_API_KEY=3fc4fa5f-6dcc-11f0-a562-0200cd936042
