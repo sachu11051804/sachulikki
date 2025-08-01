@@ -5,7 +5,7 @@ FROM tomcat:10.1-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy your WAR file into Tomcat as ROOT.war
-COPY otppro.war /usr/local/tomcat/webapps/ROOT.war
+COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
 
 # Set environment variable for 2Factor API Key
 ENV TWOFACTOR_API_KEY=3fc4fa5f-6dcc-11f0-a562-0200cd936042
